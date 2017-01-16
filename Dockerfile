@@ -6,10 +6,8 @@ RUN dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/maste
 	dnf -y upgrade && \
 	dnf -y group install "Basic Desktop" && \
 	dnf -y group install "C Development Tools and Libraries" && \
-	dnf -y install git && \
-	dnf clean all
-
-RUN dnf -y install \
+	dnf -y install \
+		git \
 		mesa-libEGL \
 		mesa-libGL && \
 	dnf clean all

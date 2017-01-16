@@ -9,5 +9,10 @@ RUN dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/maste
 	dnf -y install git && \
 	dnf clean all
 
+RUN dnf -y install \
+		mesa-libEGL \
+		mesa-libGL && \
+	dnf clean all
+
 # Set default command
 CMD ["/usr/bin/bash"]

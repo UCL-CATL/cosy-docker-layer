@@ -10,7 +10,9 @@ RUN dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/maste
 
 # This RUN command is more subject to change, so keep it separate from the
 # previous RUN command, to benefit from the cache.
-RUN dnf -y install git && \
+RUN dnf -y install \
+		git \
+		redhat-rpm-config && \
 	dnf clean all
 
 # Set default command

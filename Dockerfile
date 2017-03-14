@@ -1,8 +1,7 @@
 FROM fedora:25
 MAINTAINER Sébastien Wilmet
 
-RUN dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/RPM/unitedrpms-25-1.noarch.rpm && \
-	rpm --import https://raw.githubusercontent.com/UnitedRPMs/unitedrpms.github.io/master/URPMS-GPG-PUBLICKEY-Fedora-24 && \
+RUN dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm && \
 	dnf -y upgrade && \
 	dnf -y group install "Basic Desktop" && \
 	dnf -y group install "C Development Tools and Libraries" && \
